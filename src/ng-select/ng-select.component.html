@@ -22,7 +22,8 @@
         </ng-template>
 
         <div class="ng-input">
-            <input #filterInput
+            <mat-form-field appearance="outline">
+            <input matInput #filterInput
                    type="text"
                    [attr.autocomplete]="labelForId ? 'off' : dropdownId"
                    [attr.id]="labelForId"
@@ -40,6 +41,7 @@
                    [attr.aria-expanded]="isOpen"
                    [attr.aria-owns]="isOpen ? dropdownId : null"
                    [attr.aria-activedescendant]="isOpen ? itemsList?.markedItem?.htmlId : null">
+                </mat-form-field>
         </div>
     </div>
 
